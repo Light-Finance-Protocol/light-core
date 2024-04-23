@@ -15,8 +15,23 @@ path = 'contracts/clarity-bitcoin-mini.clar'
 clarity_version = 2
 epoch = 2.4
 
+[contracts.pool]
+path = 'contracts/pool.clar'
+clarity_version = 2
+epoch = 2.4
+
 [contracts.sBTC]
 path = 'contracts/sBTC.clar'
+clarity_version = 2
+epoch = 2.4
+
+[contracts.sample-stacking]
+path = 'contracts/sample-stacking.clar'
+clarity_version = 2
+epoch = 2.4
+
+[contracts.staking]
+path = 'contracts/staking.clar'
 clarity_version = 2
 epoch = 2.4
 

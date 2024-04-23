@@ -127,9 +127,10 @@
 (define-public (mint (amount uint) (recipient principal) (memo (optional (buff 34))))
 	(begin		
 		;; (asserts! (or (is-ok (check-is-approved)) (is-ok (check-is-owner))) ERR-NOT-AUTHORIZED)
-        ;; (asserts! (>= (string-to-uint? (contract-call? .sBTC get-balance recipient)) amount) (err thrown))
-        (try! (contract-call? .sBTC transfer amount tx-sender 'ST6WGHKEVBG7TFS35ZYWVGYQRF4GQHH0CC4RTVC2 memo))
-		(ft-mint? Light amount recipient)
+        ;; (try! (contract-call? .sBTC transfer amount tx-sender 'ST6WGHKEVBG7TFS35ZYWVGYQRF4GQHH0CC4RTVC2 memo))
+		(try! (ft-mint? Light amount recipient))
+		(print {notification: "mint"})
+        (ok true)
 	)
 )
 
